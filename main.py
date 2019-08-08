@@ -15,7 +15,7 @@ config.read('config.ini')
 
 #init the google sheet
 gc = pygsheets.authorize(service_file='./client_secret.json')
-sht = gc.open('Python測試用模板')
+sht = gc.open_by_key('1g41fSsslyb4RiU8nXD7N3sIfVhSJDT_yrbd0DDUXYeQ')
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -63,7 +63,7 @@ dispatcher = Dispatcher(bot, None)
 # Add handler for handling message, there are many kinds of message. For this handler, it particular handle text
 # message.
 dispatcher.add_handler(MessageHandler(Filters.text, reply_handler))
-dispatcher.add_handler(CommandHandler('show', start))
+dispatcher.add_handler(CommandHandler('show', show))
 
 if __name__ == "__main__":
     # Running server
