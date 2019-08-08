@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import configparser
 import logging
 import pygsheets
@@ -51,7 +52,7 @@ def reply_handler(bot, update):
     wks.insert_rows(row=0, number=1, values=post_message)
     update.message.reply_text("Thank you, " + who)
 
-def show:
+def show():
     bot.send_message(chat_id, 'READr',
         reply_markup = InlineKeyboardMarkup([[
             InlineKeyboardButton('線上連儂牆', url = 'https://www.readr.tw/')]]))
