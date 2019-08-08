@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:3.8-alpine
 
 RUN addgroup user && adduser -h /home/user -D user -G user -s /bin/sh
 
